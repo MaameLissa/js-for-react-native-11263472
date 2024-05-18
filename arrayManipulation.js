@@ -9,11 +9,11 @@ function processArray(Input){
   return newInput;
 }
 
-function formatArrayStrings(strCharacters, processedNumbers) {
-  if (strCharacters.length !== processedNumbers.length) {
+function formatArrayStrings(stringCharacters, processedNumbers) {
+  if (stringCharacters.length !== processedNumbers.length) {
     throw new Error("Ensure both arrays match in length.");
   }
-  return strCharacters.map((str, index) => {
+  return stringCharacters.map((str, index) => {
     const number = processedNumbers[index];
     if (number % 2 === 0) {
       return str.toUpperCase();
