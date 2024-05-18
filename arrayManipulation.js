@@ -1,12 +1,12 @@
-function processArray(Puzzle){
-  let newPuzzle = Puzzle.map(value =>{
+function processArray(Input){
+  let newInput = Input.map(value =>{
     if (value % 2 === 0)
   {
     return Math.pow(value,2);
   }else{
     return value * 3;
   }})
-  return newPuzzle;
+  return newInput;
 }
 
 function formatArrayStrings(strCharacters, processedNumbers) {
