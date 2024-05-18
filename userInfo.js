@@ -1,17 +1,17 @@
-let id = 1; // This will auto-increment for each user
-
-function createUserProfiles(originalNames, modifiedNames) {
-  if (originalNames.length !== modifiedNames.length) {
-    throw new Error("The two arrays must have the same length!");
+const{processArray,formatArrayString} = require("./arrayManipulation")
+let id = 1;
+function createUserProfiles(sourceLabel, alteredNames) {
+  if (sourceNames.length !== alteredNames.length) {
+    throw new Error("The two arrays must have an equal number of elements!");
   }
-  
-  return originalNames.map((originalName, index) => {
+
+  return sourceNames.map((sourceName, index) => {
     return {
       id: id++,
-      originalName: originalName,
-      modifiedName: modifiedNames[index]
+      sourceName: sourceName,
+      alteredName: alteredNames[index]
+     
     }
   });
 }
 
-module.exports = { createUserProfiles }; // Export for use in other files
